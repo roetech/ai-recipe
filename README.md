@@ -1,4 +1,4 @@
 # ai-recipe
-Recipe maker using OpenAI.
+JavaScript recipe maker using OpenAI's API.
 
 Use config.json to add your OpenAI API
