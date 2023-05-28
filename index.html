@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>AI Recipe Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="loader-container">
+    <div class="loading-text">PLEASE WAIT WHILE OUR AI GENERATES A RECIPE</div>
+    <div class="spinner"></div>    
+  </div>
+  <div class="wrapper">
+    <div id="root">
+      <h1>AI Recipe Generator</h1>
+      <div class="inputHolder">
+        <label for="chicken">What is the main protein source for this recipe?</label>
+        <select name="chicken" id="chicken">
+          <option value="Chicken">Chicken</option>
+          <option value="Pork">Pork</option>
+          <option value="Beef">Beef</option>
+          <option value="Tofu">Tofu</option>
+        </select> 
+      </div>
+      <div class="inputHolder">
+        <label for="inputField">What ingredients do you want to use in this recipe?</label>
+        <input id="inputField" type="text">
+      </div>
+      <div class="inputHolder">
+        <label for="style">What style recipe do you want?</label>
+        <select name="style" id="style">
+          <option value="Italian cuisine">Italian</option>
+          <option value="Indian cuisine">Indian</option>
+          <option value="Chineese cuisine">Chineese</option>            
+        </select> 
+      </div>
+      <div class="inputHolder">
+        <label for="time">Recipe time:</label>
+        <select name="time" id="time">
+          <option value="Less than 30 minutes">Less than 30 minutes</option>
+          <option value="between 30 minutes and an hour">Between 30 minutes and an hour</option>
+          <option value="over an hour">Over an hour</option>            
+        </select> 
+      </div>
+      <div class="inputHolder" style="text-align:center;">
+        <button id="submitBtn">Get Recipe</button>
+      </div>    
+      <div id="results"></div>
+    </div>    
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

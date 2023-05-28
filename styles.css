@@ -1,0 +1,163 @@
+*, ::after, ::before, html {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 24px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    background-attachment: fixed;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+}
+.wrapper {
+    background-image: url(food.jpg);
+    background-size: cover;
+    min-height:100vh;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+h1{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 20px 10px;
+    color:#FFF2D8;
+    text-align: center;
+    margin-bottom: 40px;    
+}
+#results h1 {
+    color: #225544;
+}
+
+#root{
+    background: #225544;
+    display: block;
+    margin: 0 10px;
+    border-radius: 25px;
+}
+
+#results{
+    overflow: auto;
+    color: #225544;
+}
+
+.inputHolder{
+    padding: 10px 20px;
+    color:#FFF2D8;
+    display: block;
+    margin: 0 auto;
+}
+.inputHolder label {
+    font-size: 1rem;
+    display: block;
+    line-height: 1.3;
+}
+.inputHolder select, .inputHolder input {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;   
+    background-color: #fff;
+    width:100%;
+}
+
+#submitBtn{
+    padding:1rem 1.9rem;
+    text-transform:uppercase;
+    margin: 20px auto;
+    background-color: #ff5522;
+    color: #fff;
+    box-shadow: inset 0 0 0 100px rgba(0,0,0,.2);
+    outline: none;
+    border-color: rgba(0,0,0,.05);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#submitBtn:hover{
+    background-color: #ee6611;
+    box-shadow: inset 0 0 0 100px rgba(0,0,0,.3);
+}
+
+.message{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0 0 25px 25px;
+    background: #FFF2D8;
+}
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: #000;
+    z-index: 1;
+}
+.spinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: #FFF2D8 transparent #FFF2D8 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+.loading-text {
+    color: #FFF2D8;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600; 
+    margin-bottom: 20px;   
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width:1020px) {
+    #root {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .inputHolder label {
+        width:62%;
+        float: left;
+        line-height: 2;
+    }
+    .inputHolder select, .inputHolder input {
+        width:38%;
+        float:right;
+    }
+    .inputHolder::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .wrapper {
+        padding-top: 15vh;
+    }
+}
